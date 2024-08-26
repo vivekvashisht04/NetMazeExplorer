@@ -1,4 +1,4 @@
-# Test 2: Testing SSH Access to DatabaseVM from Authorized and Unauthorized Sources
+# Test 2: Testing SSH Access 
 
 This directory contains screenshots related to the second test conducted during the validation of security configurations in the **NetMaze Explorer** project. This test focuses on verifying SSH access controls to the `DatabaseVM` by testing connections from both authorized and unauthorized sources.
 
