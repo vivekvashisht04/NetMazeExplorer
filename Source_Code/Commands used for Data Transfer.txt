@@ -1,0 +1,44 @@
+
+
+
+
+OnPremVM to WebAppVM:
+
+scp C:\Users\vashisht.vivek\Documents\DataTransferTest.txt webuser@10.0.1.4:C:\Users\webuser\Documents\TestingDataTransfer
+
+
+
+
+OnPremVM to DatabaseVM:
+
+scp C:\Users\vashisht.vivek\Documents\DataTransferTest.txt databaseuser@10.0.2.4:/home/databaseuser/Documents/
+
+
+
+
+
+OnPremVM to AdminVM:
+
+scp C:\Users\vashisht.vivek\Documents\DataTransferTest.txt AdminUser@10.0.3.4:C:\Users\AdminUser\Documents\DataTransferTesting
+
+
+
+
+
+
+
+
+Azure to Azure :
+
+
+
+AdminVM to WebAppVM:
+
+scp ‪‪‪C:\Users\AdminUser\Documents\TestingDATATransferInAZ\DataTRFtest.txt webuser@10.0.1.4:C:\Users\webuser\Documents\AzuretoAzureDataTransfer
+
+
+
+
+AdminVM to DatabaseVM:
+
+scp C:\Users\AdminUser\Documents\TestingDATATransferInAZ\DataTRFtest.txt databaseuser@10.0.2.4:/home/databaseuser/Documents/
