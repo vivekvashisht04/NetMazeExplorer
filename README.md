@@ -130,6 +130,11 @@ Monitoring and diagnostics were enabled on VPN Gateways, NSGs, SQL Database, and
 ## Testing
 The final phase involved rigorous testing to ensure that all configurations were correct and secure. This included testing the load balancer, data transition between on-premises and Azure, and Azure-to-Azure communication.
 
+## Main Demonstrations
+
+
+
+
 ## Conclusion
 The **NetMazeExplorer** project successfully demonstrated the ability to implement and manage a secure, hybrid networking environment using Azure services. The project showcased comprehensive skills in network configuration, security, monitoring, and performance testing, making it an ideal showcase for networking and cloud computing expertise.
 
