@@ -66,8 +66,6 @@ I deployed VMs in each subnet:
 - **AdminVM** in **AdminSubnet** (Windows Server with administrative tools)
 
 ![WebAppVM (x)](https://github.com/user-attachments/assets/b56bea2b-c625-4a0e-bc26-84ccd6c65774)
-![DatabaseVM (viii)](https://github.com/user-attachments/assets/5f4d558c-e1d8-4d2a-838c-0da90c8500e8)
-![AdminVM (Admin Tools Test) (xvii)](https://github.com/user-attachments/assets/9064a49e-6089-4cbf-a587-4d46477b0f79)
 ![Connectivity Test](https://github.com/user-attachments/assets/77b799a2-1b8a-45ea-9021-cf4468dcfcea)
 
 
@@ -82,8 +80,6 @@ I created NSGs for each subnet to control inbound and outbound traffic:
 I implemented Azure Bastion for secure RDP and SSH access without exposing VMs to the public internet. Bastion services were deployed in both **NetMazeVNet** and **OnPremVNet**.
 
 ![Azure Bastion (WebAppVM Connection) (xxi)](https://github.com/user-attachments/assets/e3712297-0e02-495c-9b43-1e2c98cb0e4f)
-![Azure Bastion (OnPremVM Connection) (xxvi)](https://github.com/user-attachments/assets/93aeec10-6776-47d7-80e2-29bc99c4d48d)
-![Azure Bastion (DatabaseVM Connection) (xix)](https://github.com/user-attachments/assets/86cdd1ed-0ba3-44c5-be3c-34e083565e57)
 ![Azure Bastion (AdminVM Connection) (xvii)](https://github.com/user-attachments/assets/fd572ac0-3cd7-4ad2-a632-49d4df939486)
 
 
@@ -91,8 +87,6 @@ I implemented Azure Bastion for secure RDP and SSH access without exposing VMs t
 I used Azure Private Link to securely connect to an Azure SQL Database named **NetMazeSQLDB** over a private endpoint within **NetMazeVNet**.
 
 ![Azure SQL Database (viii)](https://github.com/user-attachments/assets/5de12f06-6f88-43f4-a4d5-971a4be61fe3)
-![Azure SQL Database (ix)](https://github.com/user-attachments/assets/d52edf52-43df-4fa5-b595-671554ee0f3e)
-![Azure Private Link (vii)](https://github.com/user-attachments/assets/2f700d07-59af-4621-9726-0b2aec08dc78)
 ![Azure Private Link (Connectivity Test) (xii)](https://github.com/user-attachments/assets/a607e531-99f0-4b73-ba45-26f182a62ce2)
 
 
@@ -100,8 +94,6 @@ I used Azure Private Link to securely connect to an Azure SQL Database named **N
 I configured Azure DNS with a private DNS zone (`netmaze.local`) and set up an Azure Load Balancer named **NetMazeLoadBalancer** to distribute traffic across VMs in the **WebAppSubnet**.
 
 ![Azure Load Balancer (viii)](https://github.com/user-attachments/assets/50d9c1d6-ecd5-4d00-817b-f9df0fce8fe9)
-![Private DNS Zone (vi)](https://github.com/user-attachments/assets/f8874dc2-ba7d-476d-8b80-86687ce0a621)
-![Private DNS Zone (v)](https://github.com/user-attachments/assets/05c7e346-98c2-42e2-b819-aa9fdee63410)
 ![Verification (DNS) (ii)](https://github.com/user-attachments/assets/d11cbc8a-078c-4809-ade1-323aa0144e39)
 
 
