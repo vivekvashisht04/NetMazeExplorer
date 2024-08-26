@@ -132,8 +132,7 @@ The final phase involved rigorous testing to ensure that all configurations were
 
 ## Main Demonstrations
 
-![image](https://github.com/user-attachments/assets/289bad7c-7f97-47f7-bc70-6f67ffc62578)
-
+![NetMaze Explorer (Key Demonstration)](https://github.com/user-attachments/assets/36d135e6-8474-4ee4-b8d8-a74461139d3f)
 
 
 ## Conclusion
