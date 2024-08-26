@@ -133,8 +133,6 @@ The final phase involved rigorous testing to ensure that all configurations were
 ## Main Demonstrations
 
 ![NetMaze Explorer (Key Demonstration)](https://github.com/user-attachments/assets/36d135e6-8474-4ee4-b8d8-a74461139d3f)
-![image](https://github.com/user-attachments/assets/690d2312-dd9f-4046-bbde-8af40326d34b)
-
 
 
 ## Conclusion
@@ -150,6 +148,7 @@ The **NetMazeExplorer** project successfully demonstrated the ability to impleme
 - **Manual:** A detailed manual of 180 Pages documenting each step of the project, including configurations, testing procedures, screenshots and troubleshooting tips.
 - **Screenshots:** Visual documentation of key stages and configurations throughout the project, providing a visual guide and reference.
 - **Source Code:** All the source code used in this project, including Powershell Scripts, Commands used for Data Transfer etc. organized in the `Source_Code` folder.
+- **Demo:** A Video of Key Demonstrations of the Project. 
 
 ## Contact
 For any questions or further information, feel free to reach out to me on LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/vivek-vashisht04/)
