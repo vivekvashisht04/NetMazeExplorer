@@ -130,9 +130,9 @@ Monitoring and diagnostics were enabled on VPN Gateways, NSGs, SQL Database, and
 ## Testing
 The final phase involved rigorous testing to ensure that all configurations were correct and secure. This included testing the load balancer, data transition between on-premises and Azure, and Azure-to-Azure communication.
 
-## Main Demonstrations
+## Main Demonstrations (Video)
 
-![NetMaze Explorer (Key Demonstration)](https://github.com/user-attachments/assets/36d135e6-8474-4ee4-b8d8-a74461139d3f)
+[![NetMaze Explorer Main Demonstration](https://img.youtube.com/vi/tYM8_nwB4zY/0.jpg)](https://www.youtube.com/watch?v=tYM8_nwB4zY)
 
 
 ## Conclusion
@@ -148,7 +148,7 @@ The **NetMazeExplorer** project successfully demonstrated the ability to impleme
 - **Manual:** A detailed manual of 180 Pages documenting each step of the project, including configurations, testing procedures, screenshots and troubleshooting tips.
 - **Screenshots:** Visual documentation of key stages and configurations throughout the project, providing a visual guide and reference.
 - **Source Code:** All the source code used in this project, including Powershell Scripts, Commands used for Data Transfer etc. organized in the `Source_Code` folder.
-- **Demo:** A Video of Key Demonstrations of the Project. 
+
 
 ## Contact
 For any questions or further information, feel free to reach out to me on LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/vivek-vashisht04/)
