@@ -36,8 +36,16 @@ I created a Resource Group named **NetMazeRG** where I planned to deploy the ent
 - **AdminSubnet:** `10.0.3.0/24`
 - **GatewaySubnet:** `10.0.255.0/27` for future VPN connectivity.
 
+
+![Virtual Network (viii)](https://github.com/user-attachments/assets/682b5a0f-f75f-4146-bb70-3ac1941901d4)
+
+
 ### 2) On-Premises Network Simulation
 To simulate the on-premises environment, I deployed another VNet named **OnPremVNet** in the North Central US region, with a **GatewaySubnet** (`10.1.255.0/27`) to connect it with **NetMazeVNet** using a site-to-site VPN.
+
+
+![OnPremVNet (v)](https://github.com/user-attachments/assets/b7990b9b-3bf7-4c19-9970-d962c395188a)
+
 
 ### 3) Secure Connectivity
 I implemented Azure VPN Gateway to create a site-to-site VPN connection between the **OnPremVNet** and **NetMazeVNet**. This included creating:
@@ -46,11 +54,22 @@ I implemented Azure VPN Gateway to create a site-to-site VPN connection between 
 - Local network gateways to represent each environment in the opposite network
 - Site-to-site VPN connections: **NetMazeToOnPrem** and **OnPremToNetMaze**.
 
+![Connectivity Test (i)](https://github.com/user-attachments/assets/53db079a-5695-4c95-ac6c-524a2c3299eb)
+![Connectivity Test (iii)](https://github.com/user-attachments/assets/bbd867b7-e20e-41ce-ae86-bc5f4ed37e2c)
+![Connectivity Test (Ping Successful) (vii)](https://github.com/user-attachments/assets/b4827116-1b39-4742-999d-5001a00aa58c)
+
+
 ### 4) Resource Deployment
 I deployed VMs in each subnet:
 - **WebAppVM** in **WebAppSubnet** (Windows Server with IIS installed)
 - **DatabaseVM** in **DatabaseSubnet** (Ubuntu Server with MySQL installed)
 - **AdminVM** in **AdminSubnet** (Windows Server with administrative tools)
+
+![WebAppVM (x)](https://github.com/user-attachments/assets/b56bea2b-c625-4a0e-bc26-84ccd6c65774)
+![DatabaseVM (viii)](https://github.com/user-attachments/assets/5f4d558c-e1d8-4d2a-838c-0da90c8500e8)
+![AdminVM (Admin Tools Test) (xvii)](https://github.com/user-attachments/assets/9064a49e-6089-4cbf-a587-4d46477b0f79)
+![Connectivity Test](https://github.com/user-attachments/assets/77b799a2-1b8a-45ea-9021-cf4468dcfcea)
+
 
 ### 5) Network Access Control
 I created NSGs for each subnet to control inbound and outbound traffic:
@@ -58,23 +77,46 @@ I created NSGs for each subnet to control inbound and outbound traffic:
 - **DatabaseNSG:** Allows MySQL and SSH traffic to **DatabaseVM**
 - **AdminNSG:** Allows RDP and SSH traffic to **AdminVM**
 
+
 ### 6) Secure Administrative Access
 I implemented Azure Bastion for secure RDP and SSH access without exposing VMs to the public internet. Bastion services were deployed in both **NetMazeVNet** and **OnPremVNet**.
+
+![Azure Bastion (WebAppVM Connection) (xxi)](https://github.com/user-attachments/assets/e3712297-0e02-495c-9b43-1e2c98cb0e4f)
+![Azure Bastion (OnPremVM Connection) (xxvi)](https://github.com/user-attachments/assets/93aeec10-6776-47d7-80e2-29bc99c4d48d)
+![Azure Bastion (DatabaseVM Connection) (xix)](https://github.com/user-attachments/assets/86cdd1ed-0ba3-44c5-be3c-34e083565e57)
+![Azure Bastion (AdminVM Connection) (xvii)](https://github.com/user-attachments/assets/fd572ac0-3cd7-4ad2-a632-49d4df939486)
+
 
 ### 7) Private Access to Azure PaaS Services
 I used Azure Private Link to securely connect to an Azure SQL Database named **NetMazeSQLDB** over a private endpoint within **NetMazeVNet**.
 
+![Azure SQL Database (viii)](https://github.com/user-attachments/assets/5de12f06-6f88-43f4-a4d5-971a4be61fe3)
+![Azure SQL Database (ix)](https://github.com/user-attachments/assets/d52edf52-43df-4fa5-b595-671554ee0f3e)
+![Azure Private Link (vii)](https://github.com/user-attachments/assets/2f700d07-59af-4621-9726-0b2aec08dc78)
+![Azure Private Link (Connectivity Test) (xii)](https://github.com/user-attachments/assets/a607e531-99f0-4b73-ba45-26f182a62ce2)
+
+
 ### 8) DNS and Load Balancing
 I configured Azure DNS with a private DNS zone (`netmaze.local`) and set up an Azure Load Balancer named **NetMazeLoadBalancer** to distribute traffic across VMs in the **WebAppSubnet**.
 
+![Azure Load Balancer (viii)](https://github.com/user-attachments/assets/50d9c1d6-ecd5-4d00-817b-f9df0fce8fe9)
+![Private DNS Zone (vi)](https://github.com/user-attachments/assets/f8874dc2-ba7d-476d-8b80-86687ce0a621)
+![Private DNS Zone (v)](https://github.com/user-attachments/assets/05c7e346-98c2-42e2-b819-aa9fdee63410)
+![Verification (DNS) (ii)](https://github.com/user-attachments/assets/d11cbc8a-078c-4809-ade1-323aa0144e39)
+
+
 ### 9) Access Control (Update According to the Project Workflow)
 Final NSG updates were made to reflect the correct project workflow, including specific rules for HTTP, HTTPS, and RDP access.
+
 
 ### 10) Performance and Security Testing
 I simulated various network scenarios, including:
 1. **Checked Load Balancer Functionality:** Tested load balancing between VMs in **WebAppSubnet**.
 2. **Tested Data Transition Between On-Premises and Azure:** Verified data transition and connectivity between **OnPremVM** and VMs in **NetMazeVNet**.
 3. **Tested Azure-to-Azure Communication:** Verified data transition and connectivity between VMs in **NetMazeVNet**.
+
+![Testing Load Balancer (ii)](https://github.com/user-attachments/assets/1e313cdc-ab35-48ad-ab43-7daaec3016d8)
+
 
 ### Additionally, I validated security configurations through tests like:
 - HTTP and SSH access from authorized and unauthorized sources
@@ -97,7 +139,7 @@ The **NetMazeExplorer** project successfully demonstrated the ability to impleme
 - **Resource Management:** Efficient management and deployment of Azure resources with a focus on security and performance.
 
 ## Repository Contents
-- **Manual:** A detailed manual documenting each step of the project, including configurations, testing procedures, screenshots and troubleshooting tips.
+- **Manual:** A detailed manual of 180 Pages documenting each step of the project, including configurations, testing procedures, screenshots and troubleshooting tips.
 - **Screenshots:** Visual documentation of key stages and configurations throughout the project, providing a visual guide and reference.
 - **Source Code:** All the source code used in this project, including Powershell Scripts, Commands used for Data Transfer etc. organized in the `Source_Code` folder.
 
