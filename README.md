@@ -132,6 +132,7 @@ The final phase involved rigorous testing to ensure that all configurations were
 
 ## Main Demonstrations
 
+![image](https://github.com/user-attachments/assets/289bad7c-7f97-47f7-bc70-6f67ffc62578)
 
 
 
