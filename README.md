@@ -110,13 +110,22 @@ I simulated various network scenarios, including:
 ![Testing Load Balancer (ii)](https://github.com/user-attachments/assets/1e313cdc-ab35-48ad-ab43-7daaec3016d8)
 
 
+
 ### Additionally, I validated security configurations through tests like:
 - HTTP and SSH access from authorized and unauthorized sources
 - Accessing blocked ports
 - ICMP (Ping) tests across different VMs
 
+
 ### 11) Monitoring and Auditing
 Monitoring and diagnostics were enabled on VPN Gateways, NSGs, SQL Database, and Load Balancer using Azure Monitor and Log Analytics Workspaces. Alerts were set up for unauthorized SSH attempts and VPN Gateway downtime.
+
+![Enable Monitoring on NSGs (viii)](https://github.com/user-attachments/assets/eade1c29-9ea4-4c1a-85fd-80bb43d06393)
+![Enable Monitoring on SQL DB (iii)](https://github.com/user-attachments/assets/2d1d1071-1ab8-450d-9f4a-59a5f1733e4a)
+![Enable Monitoring on VPN Gateway (v)](https://github.com/user-attachments/assets/44cd8fb0-5fdc-4601-9e37-a96df0eee1ed)
+![VPN Gateway Downtime Alert (vii)](https://github.com/user-attachments/assets/479b3f43-3e96-41a4-8d32-73d306fb725a)
+![Unauthorized SSH Attempt Alert (viii)](https://github.com/user-attachments/assets/4c61496d-08df-4587-92bd-3ecc146a6ee4)
+
 
 ## Testing
 The final phase involved rigorous testing to ensure that all configurations were correct and secure. This included testing the load balancer, data transition between on-premises and Azure, and Azure-to-Azure communication.
